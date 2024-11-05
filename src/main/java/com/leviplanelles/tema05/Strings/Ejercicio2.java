@@ -28,6 +28,7 @@ public class Ejercicio2 {
 
     public static void main(String[] args) {
         String frase = IO.solicitarString("Ingrese una frase: ",0,100);
+        IO.close();
         System.out.println(vocCons(frase));
     }
 }
