@@ -46,9 +46,6 @@ public class Ejercicio11 {
         System.out.println("----");
         System.out.println("g");
         System.out.println(sb.append(nombre).append(" ").append(apellido1).append(" ").append(apellido2).reverse());
-
-
-
     }
 
     public static void main(String[] args) {
