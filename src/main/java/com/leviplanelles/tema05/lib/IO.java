@@ -48,7 +48,7 @@ public class IO {
     }
     public static boolean esVocal(char c) {
         c = Character.toLowerCase(c);
-        String vocales = "aáàeéèiíìoóòuúù";
+        String vocales = "aáàAÁÀeéèEÉÈiíìIÍÌoóòOÓÒuúùUÚÙ";
         return vocales.indexOf(c) >= 0;
     }
     public static boolean esConsonante(char c) {
