@@ -20,7 +20,6 @@ public class Ejercicio18 {
      */
     public static int calcularLuckyNumber(String fechaTodaJunta) {
         int total = 0;
-        int suma = 0;
         char[] numeros = new char[fechaTodaJunta.length()];
         for (int i = 0; i < fechaTodaJunta.length(); i++) {
             numeros[i] = fechaTodaJunta.charAt(i);
