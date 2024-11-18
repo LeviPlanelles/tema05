@@ -47,7 +47,7 @@ public class Ejercicio13 {
             choice = IO.solicitarInt("Elige una opción: ",0,3);
             switch (choice) {
                 case 1 -> System.out.println("La palabra más larga de las tres introducidas es: " + masLarga());
-                case 2 -> System.out.println("La palabra más de las tres introducidas es: " + masCorta());
+                case 2 -> System.out.println("La palabra más corta de las tres introducidas es: " + masCorta());
                 case 3 -> {
                     palabra = IO.solicitarString("Ingresa una palabra:",0,100);
                     System.out.println("El número de vocales que tiene la palabra '" + palabra + "' es: " + numVocales(palabra));
