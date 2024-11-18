@@ -1,6 +1,4 @@
 package com.leviplanelles.tema05.Arrays;
-
-import java.util.Arrays;
 import java.util.Scanner;
 
 public class Ejercicio2 {
