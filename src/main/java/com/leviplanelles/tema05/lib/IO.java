@@ -1,4 +1,5 @@
 package com.leviplanelles.tema05.lib;
+import java.util.Random;
 import java.util.Scanner;
 
 public class IO {
@@ -77,7 +78,18 @@ public class IO {
         String[] palabras = texto.split("\\s+");
         return palabras.length;
     }
-
+    public static double aleatorio(double valorMin, double valorMax) {
+        Random random = new Random();
+        return valorMin + random.nextDouble() * (valorMax - valorMin);
+    }
+    public static int[] crearArrayEnteros(int tamanio, int numMax) {
+        Random random = new Random();
+        int[] enteros = new int[tamanio];
+        for (int i = 0; i < enteros.length; i++) {
+            enteros[i] = random.nextInt(0, numMax + 1);
+        }
+        return enteros;
+    }
     public static void close() {
         scanner.close();
     }
