@@ -45,8 +45,8 @@ public class Ejercicio6 {
         return resArrayDivision;
     }
     public static void main(String[] args) {
-        int[] arr1 = crearArrayEnteros(10, 11);
-        int[] arr2 = crearArrayEnteros(10, 11);
+        int[] arr1 = crearArrayEnteros(10, 10);
+        int[] arr2 = crearArrayEnteros(10, 10);
         System.out.println(Arrays.toString(sumaDeArrays(arr1,arr2)));
         System.out.println(Arrays.toString(divisionDeArrays(arr1,arr2)));
     }
