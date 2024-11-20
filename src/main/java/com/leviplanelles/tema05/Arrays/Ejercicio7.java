@@ -12,7 +12,8 @@ public class Ejercicio7 {
         }
         return contador;
     }
-    public static int[] arrayMultiplosDeNum(int[] numeros,int tamanio,int multiplo) {
+    public static int[] arrayMultiplosDeNum(int[] numeros,int multiplo) {
+        int tamanio = multiplosDeNum(numeros,multiplo);
         int[] multiplos5 = new int[tamanio];
         int contador = 0;
         for (int numero : numeros) {
@@ -36,8 +37,8 @@ public class Ejercicio7 {
 
     public static void main(String[] args) {
         int[] numerosAleatorios = crearArrayEnteros(100, 100);
-        int[] multiplos5 = arrayMultiplosDeNum(numerosAleatorios,multiplosDeNum(numerosAleatorios,5),5);
-        int[] multiplos10 = arrayMultiplosDeNum(numerosAleatorios,multiplosDeNum(numerosAleatorios,10),10);
+        int[] multiplos5 = arrayMultiplosDeNum(numerosAleatorios,5);
+        int[] multiplos10 = arrayMultiplosDeNum(numerosAleatorios,10);
         String ceros = esCero(numerosAleatorios);
         System.out.println("Multiplos de 5: " + Arrays.toString(multiplos5));
         System.out.println("Son ceros: " + ceros);
