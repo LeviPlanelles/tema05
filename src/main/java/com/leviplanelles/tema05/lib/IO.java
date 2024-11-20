@@ -1,4 +1,5 @@
 package com.leviplanelles.tema05.lib;
+import java.util.Arrays;
 import java.util.Random;
 import java.util.Scanner;
 
@@ -89,6 +90,9 @@ public class IO {
             enteros[i] = random.nextInt(0, numMax + 1);
         }
         return enteros;
+    }
+    public static void visualizarArrayEnteros(int[] array) {
+        System.out.println(Arrays.toString(array));
     }
     public static void close() {
         scanner.close();
