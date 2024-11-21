@@ -14,6 +14,9 @@ public class Ejercicio7 {
     }
     public static int[] arrayMultiplosDeNum(int[] numeros,int multiplo) {
         int tamanio = multiplosDeNum(numeros,multiplo);
+        if (tamanio == 0) {
+            return null;
+        }
         int[] multiplos5 = new int[tamanio];
         int contador = 0;
         for (int numero : numeros) {

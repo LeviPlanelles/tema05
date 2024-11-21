@@ -84,10 +84,13 @@ public class IO {
         return valorMin + random.nextDouble() * (valorMax - valorMin);
     }
     public static int[] crearArrayEnteros(int tamanio, int numMax) {
+        return crearArrayEnteros(tamanio,0,numMax);
+    }
+    public static int[] crearArrayEnteros(int tamanio,int numMin, int numMax) {
         Random random = new Random();
         int[] enteros = new int[tamanio];
         for (int i = 0; i < enteros.length; i++) {
-            enteros[i] = random.nextInt(0, numMax + 1);
+            enteros[i] = random.nextInt(numMin, numMax + 1);
         }
         return enteros;
     }
@@ -108,5 +111,29 @@ public class IO {
     }
     public static void close() {
         scanner.close();
+    }
+    public static int multiplosDeNum(int[] numeros,int multiplo) {
+        int contador = 0;
+        for (int numero : numeros) {
+            if (numero % multiplo == 0) {
+                contador++;
+            }
+        }
+        return contador;
+    }
+    public static int[] arrayMultiplosDeNum(int[] numeros,int multiplo) {
+        int tamanio = multiplosDeNum(numeros,multiplo);
+        if (tamanio == 0) {
+            return null;
+        }
+        int[] multiplos5 = new int[tamanio];
+        int contador = 0;
+        for (int numero : numeros) {
+            if (numero % multiplo == 0) {
+                multiplos5[contador] = numero;
+                contador++;
+            }
+        }
+        return multiplos5;
     }
 }
