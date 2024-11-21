@@ -94,6 +94,18 @@ public class IO {
     public static void visualizarArrayEnteros(int[] array) {
         System.out.println(Arrays.toString(array));
     }
+    /**
+     * Funcion que te invierte un array
+     * @param arr un array
+     * @return el array invertido
+     */
+    public static int[] invertirArr(int[] arr) {
+        int[] arrInvertido = new int[arr.length];
+        for (int i = 0; i < arr.length; i++) {
+            arrInvertido[i] = arr[(arr.length-1)-i];
+        }
+        return arrInvertido;
+    }
     public static void close() {
         scanner.close();
     }
