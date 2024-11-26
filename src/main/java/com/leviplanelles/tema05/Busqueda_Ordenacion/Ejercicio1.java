@@ -5,27 +5,34 @@ import com.leviplanelles.tema05.lib.IO;
 import java.util.Arrays;
 
 public class Ejercicio1 {
-
-    public static int[] ordenarArray(int[] array) {
+    public static void intercambio(int[] arr, int posicionOrgien, int posicionDestino) {
+        int aux = arr[posicionOrgien];
+        arr[posicionOrgien] = arr[posicionDestino];
+        arr[posicionDestino] = aux;
+    }
+    public static int[] bubbleSort(int[] array) {
         int guardar;
-        int contador = array.length-1;
+        boolean hayCambios;
         for (int i = 0; i < array.length; i++) {
-            for (int j = 0; j < contador; j++) {
+            hayCambios = false;
+            for (int j = 0; j < array.length - 1; j++) {
                 if (array[j] > array[j+1]) {
                     guardar = array[j];
                     array[j] = array[j+1];
                     array[j+1] = guardar;
-                    //contador--;
+                    hayCambios = true;
+                }
+                if (!hayCambios) {
+                    return array;
                 }
             }
         }
-
         return array;
     }
     public static void main(String[] args) {
         int[] arrDesordenado = IO.crearArrayEnteros(10,-10, 10);
         System.out.println(Arrays.toString(arrDesordenado));
-        System.out.println(Arrays.toString(ordenarArray(arrDesordenado)));
+        System.out.println(Arrays.toString(bubbleSort(arrDesordenado)));
 
 
     }
