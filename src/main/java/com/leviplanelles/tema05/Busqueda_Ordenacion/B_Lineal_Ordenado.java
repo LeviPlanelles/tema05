@@ -19,7 +19,6 @@ public class B_Lineal_Ordenado {
                 }
                 contador++;
             }while (arr[contador] <= entero);
-
         }
         return res;
     }
