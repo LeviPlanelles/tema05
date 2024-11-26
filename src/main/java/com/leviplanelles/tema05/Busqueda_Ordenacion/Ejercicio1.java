@@ -8,7 +8,7 @@ public class Ejercicio1 {
 
     public static int[] ordenarArray(int[] array) {
         int guardar;
-        int contador = array.length - 1;
+        int contador = array.length-1;
         for (int i = 0; i < array.length; i++) {
             for (int j = 0; j < contador; j++) {
                 if (array[j] > array[j+1]) {
