@@ -4,7 +4,7 @@ import com.leviplanelles.tema05.lib.IO;
 
 import java.util.Arrays;
 
-public class Ejercicio1 {
+public class BubbleSort {
     public static void intercambio(int[] arr, int posicionOrgien, int posicionDestino) {
         int aux = arr[posicionOrgien];
         arr[posicionOrgien] = arr[posicionDestino];
@@ -17,9 +17,7 @@ public class Ejercicio1 {
             hayCambios = false;
             for (int j = 0; j < array.length - 1; j++) {
                 if (array[j] > array[j+1]) {
-                    guardar = array[j];
-                    array[j] = array[j+1];
-                    array[j+1] = guardar;
+                    intercambio(array,j,j+1);
                     hayCambios = true;
                 }
                 if (!hayCambios) {
