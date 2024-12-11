@@ -136,4 +136,44 @@ public class IO {
         }
         return multiplos5;
     }
+    public static double[][] crearMatrizAleatoria(int filas, int columnas, double valorMin, double valorMax) {
+        double[][] matriz = new double[filas][columnas];
+        for (int i = 0; i < matriz.length; i++) {
+            for (int j = 0; j < matriz[i].length; j++) {
+                matriz[i][j] = aleatorio(valorMin,valorMax);
+            }
+        }
+        return matriz;
+    }
+    public static String matrizToString(double[][] matriz, int decimales, int padding) {
+        StringBuilder sb = new StringBuilder();
+        for (double[] fila : matriz) {
+            for (double valor : fila) {
+                sb.append(valor).append(" ");
+            }
+            sb.append("\n");
+        }
+        return sb.toString();
+    }
+    public static int determinarLongitudMaxima(double[][] matriz, int decimales) {
+        int longitudMaxima = 0;
+        for (double[] fila : matriz) {
+            int longitud = determinarLongitudMaxima(fila,decimales);
+            if (longitud > longitudMaxima) {
+                longitudMaxima = longitud;
+            }
+        }
+        return longitudMaxima;
+    }
+    public static int determinarLongitudMaxima(double[] array, int decimales) {
+        int longitudMaxima = 0;
+        String formato = "%." + decimales + "f";
+        for (double numero : array) {
+            int longitudActual = String.format(formato, numero).length();
+            if (longitudMaxima < longitudActual) {
+                longitudMaxima = longitudActual;
+            }
+        }
+        return longitudMaxima;
+    }
 }
