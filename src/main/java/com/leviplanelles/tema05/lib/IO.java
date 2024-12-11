@@ -145,6 +145,16 @@ public class IO {
         }
         return matriz;
     }
+    public static int[][] crearMatrizAleatoria(int filas, int columnas, int valorMin, int valorMax) {
+        Random random = new Random();
+        int[][] matriz = new int[filas][columnas];
+        for (int i = 0; i < matriz.length; i++) {
+            for (int j = 0; j < matriz[i].length; j++) {
+                matriz[i][j] = random.nextInt(valorMin,valorMax+1);
+            }
+        }
+        return matriz;
+    }
     public static String matrizToString(double[][] matriz, int decimales, int padding) {
         StringBuilder sb = new StringBuilder();
         for (double[] fila : matriz) {
