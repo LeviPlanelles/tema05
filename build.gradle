@@ -1,15 +1,22 @@
 plugins {
     id 'java'
+    id 'application'
 }
 
 group = 'com.leviplanelles.tema05'
 version = '1.0-SNAPSHOT'
 
+
 repositories {
     mavenCentral()
 }
 
+application {
+    mainClassName = "com.leviplanelles.tema05.Matrices.Ejercicio5"
+}
+
 dependencies {
+    implementation 'com.github.kwhat:jnativehook:2.2.2'
     testImplementation platform('org.junit:junit-bom:5.10.0')
     testImplementation 'org.junit.jupiter:junit-jupiter'
 }
